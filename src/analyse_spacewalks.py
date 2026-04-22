@@ -37,8 +37,8 @@ def parseDuration(d):
 
 # df['duration_hrs'] = df['duration'].apply(parseDuration)
 
-colour_usa = '#e41a1c'
-colour_russia = '#4daf4a'
+colour_usa = '#377eb8'
+colour_russia = '#ff7f00'
 
 # --------------------------------------------------
 # Figure 1: Cumulative EVA hours over time
