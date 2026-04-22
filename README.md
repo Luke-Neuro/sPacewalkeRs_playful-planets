@@ -2,6 +2,8 @@
 
 This repository contains a reproducible manuscript analysing six decades of NASA and Roscosmos extravehicular activity (EVA) data. Analysis figures are generated from Python and R scripts on every push to `main`, and the rendered manuscript is deployed to GitHub Pages.
 
+[![DOI](https://sandbox.zenodo.org/badge/1217589221.svg)](https://handle.test.datacite.org/10.5072/zenodo.491791)
+
 ## Repository structure
 
 ```
