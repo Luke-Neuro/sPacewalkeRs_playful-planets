@@ -1,17 +1,18 @@
 # NASA Spacewalk Analysis — Python
 # https://data.nasa.gov/resource/eva.json (with modifications)
 # Generates three figures for the manuscript
-
+import os
 import json
-import csv
 import datetime as dt
 import matplotlib.pyplot as plt
-import matplotlib
 import pandas as pd
-import numpy as np
 
 # Load data
-output_dir = '/home/sarah/Projects/spacewalk-analysis/results/figures/'
+output_dir = 'Results/Figures'
+
+# Check if output directory exists, if not create it
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir) 
 
 data_f = open('data/data.json', 'r')
 raw = json.load(data_f)
@@ -55,7 +56,7 @@ ax1.plot(df_dur['date'], df_dur['cumulative_hrs'], color='black', linewidth=1.5)
 ax1.spines['top'].set_visible(False)
 ax1.spines['right'].set_visible(False)
 plt.tight_layout()
-plt.savefig('results/figures/fig_cumulative_hours.png', dpi=150)
+plt.savefig('Results/Figures/fig_cumulative_hours.png', dpi=150)
 plt.close()
 
 # --------------------------------------------------
