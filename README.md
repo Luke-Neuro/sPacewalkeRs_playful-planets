@@ -4,9 +4,6 @@ This repository contains a reproducible manuscript analysing six decades of NASA
 
 [![DOI](https://sandbox.zenodo.org/badge/1217589221.svg)](https://handle.test.datacite.org/10.5072/zenodo.491791)
 
-[![cff]([Uplo# This CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
 title: NASA Spacewalk Analysis
 message: >-
@@ -24,7 +21,7 @@ keywords:
 license: MIT
 commit: 'no'
 version: 1.0.0
-ading CITATION.cff…]()
+g CITATION.cff…]()
 
 
 ## Repository structure
