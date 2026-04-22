@@ -4,6 +4,29 @@ This repository contains a reproducible manuscript analysing six decades of NASA
 
 [![DOI](https://sandbox.zenodo.org/badge/1217589221.svg)](https://handle.test.datacite.org/10.5072/zenodo.491791)
 
+[![cff]([Uplo# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: NASA Spacewalk Analysis
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Luke
+    family-names: B
+identifiers:
+  - type: doi
+    value: 10.5072/zenodo.491792
+keywords:
+  - test
+license: MIT
+commit: 'no'
+version: 1.0.0
+ading CITATION.cff…]()
+
+
 ## Repository structure
 
 ```
