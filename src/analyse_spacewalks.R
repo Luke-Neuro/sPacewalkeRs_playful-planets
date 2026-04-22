@@ -9,7 +9,10 @@ library(lubridate)
 library(tidyr)
 library(knitr)
 
-output_dir <- '/home/sarah/Projects/spacewalk-analysis/results/figures/'
+
+output_dir <- "results/figures/"
+
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 df <- fromJSON("data/data.json", flatten = TRUE)
 df$date <- as.Date(df$date)
@@ -40,7 +43,7 @@ p1 <- ggplot(evas_per_year, aes(x = year, y = n, fill = country)) +
   scale_fill_manual(values = colour_map) +
   theme_minimal(base_size = 10)
 
-ggsave("results/figures/fig_evas_per_year.png", plot = p1,
+ggsave(file.path(output_dir, "fig_evas_per_year.png"), plot = p1,
        width = 8, height = 4, dpi = 150)
 
 # --------------------------------------------------
@@ -60,8 +63,9 @@ p2 <- ggplot(cum_data, aes(x = date, y = cum_evas, colour = country)) +
   scale_colour_manual(values = colour_map) +
   theme_minimal(base_size = 10)
 
-ggsave("results/figures/fig_cumulative_count.png", plot = p2,
+ggsave(file.path(output_dir, "fig_cumulative_count.png"), plot = p1,
        width = 8, height = 4, dpi = 150)
+
 
 # --------------------------------------------------
 # Figure 3: EVA duration over time (scatter + smoother)
@@ -81,7 +85,7 @@ p3 <- ggplot(df_scatter, aes(x = date, y = duration_hrs, colour = country)) +
   scale_colour_manual(values = colour_map) +
   theme_minimal(base_size = 10)
 
-ggsave("results/figures/fig_duration_over_time.png", plot = p3,
+ggsave(file.path(output_dir, "fig_duration_over_time.png"), plot = p1,
        width = 8, height = 4, dpi = 150)
 
 print("R figures generated.")
